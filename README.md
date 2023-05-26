@@ -1,29 +1,9 @@
-# fun
+# 一些有趣的小demo(不断补充中)
 
-## Project setup
-```
-npm install
-```
+* 汉诺塔
 
-### Compiles and hot-reloads for development
+## 使用
 ```
+npm i
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
