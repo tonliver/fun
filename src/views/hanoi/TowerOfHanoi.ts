@@ -34,12 +34,12 @@ export default class TowerOfHanoi<T> {
     }
   }
 
-  reset (): void {
+  protected reset (): void {
     this.totalSteps = 0
     this.steps = []
   }
 
-  next (numOfDisks: number, source: T, helper: T, dest: T): void {
+  protected next (numOfDisks: number, source: T, helper: T, dest: T): void {
     if (numOfDisks === 1) {
       this.move(source, dest)
       return
@@ -49,7 +49,7 @@ export default class TowerOfHanoi<T> {
     this.next(numOfDisks - 1, helper, source, dest)
   }
 
-  move (source: T, dest: T): void {
+  protected move (source: T, dest: T): void {
     this.totalSteps += 1
     this.steps.push({ source, dest })
   }

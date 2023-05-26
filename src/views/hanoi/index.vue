@@ -14,7 +14,7 @@
           <el-button v-if="isEnd || isEnd" type="primary" size="mini" @click="onResetClicked">重置</el-button>
         </el-col>
         <el-col :span="10">
-          <div v-if="playState">共需{{ result.totalSteps }}步<template v-if="isPlaying || isEnd">，当前第 {{ currentStep + 1 }} 步</template></div>
+          <div v-if="playState">共需{{ result.totalSteps }}步<template>，当前第 {{ currentStep + 1 }} 步</template></div>
         </el-col>
       </el-row>
     </div>
@@ -133,6 +133,7 @@ export default class Hanoi extends Vue {
       return
     }
     this.playState = PlayState.PLAYING
+    this.currentStep += 1
     this.renderResult()
   }
 
