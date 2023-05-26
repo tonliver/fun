@@ -11,7 +11,7 @@
           <el-button v-if="isPlaying" type="primary" size="mini" @click="stop">暂停</el-button>
           <el-button v-if="isStopped" type="primary" size="mini" @click="resume">继续</el-button>
           <el-button v-if="isStopped" type="primary" size="mini" @click="nextStep" :disabled="isLocked">下一步</el-button>
-          <el-button v-if="isEnd || isEnd" type="primary" size="mini" @click="onResetClicked">重置</el-button>
+          <el-button v-if="isEnd" type="primary" size="mini" @click="onResetClicked">重置</el-button>
         </el-col>
         <el-col :span="10">
           <div v-if="playState">共需{{ result.totalSteps }}步<template>，当前第 {{ currentStep + 1 }} 步</template></div>
