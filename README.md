@@ -6,10 +6,14 @@
 # 代码结构
 ```
 |- src
+  |- components
+    |- logger.vue         日志显示面板
   |- views
-    |- hanoi
+    |- hanoi              汉诺塔
       |- index.vue        UI
       |- TowerOfHanoi.ts  汉诺塔逻辑处理类
+    |- debounce-throttle  防抖与节流示例
+      |- index.vue
   |- utils
     |- debounce.ts  防抖函数
     |- throttle.ts  节流函数

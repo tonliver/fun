@@ -16,7 +16,12 @@ const routes: Array<RouteConfig> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@/views/hanoi/index.vue')
+    component: () => import(/* webpackChunkName: "hanoi" */ '@/views/hanoi/index.vue')
+  },
+  {
+    path: '/debounce-throttle',
+    name: 'DebounceAndThrottle',
+    component: () => import(/* webpackChunkName: "debounce" */ '@/views/debounce-throttle/index.vue')
   }
 ]
 

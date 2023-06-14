@@ -9,17 +9,17 @@ export default function throttle (fn: Func, wait: number): Func {
   let lastExecTime = 0
 
   return function (this: any, ...args: any[]) {
+    if (timer) {
+      clearTimeout(timer)
+    }
     const currentTime = Date.now()
     const remainTime = lastExecTime + wait - currentTime
     if (remainTime <= 0) {
       lastExecTime = currentTime
       return fn.apply(this, args)
     }
-
-    if (timer) {
-      clearTimeout(timer)
-    }
     timer = setTimeout(() => {
+      lastExecTime = Date.now()
       fn.apply(this, args)
       timer = null
     }, remainTime)

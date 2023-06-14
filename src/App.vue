@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">首页</router-link> |
-      <router-link to="/hanoi">汉诺塔</router-link>
+      <router-link to="/hanoi">汉诺塔</router-link> |
+      <router-link to="/debounce-throttle">防抖与节流</router-link>
     </div>
     <router-view/>
   </div>
